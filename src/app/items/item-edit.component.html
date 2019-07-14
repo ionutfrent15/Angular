@@ -1,0 +1,19 @@
+<table *ngIf="item">
+  <tr>
+    <th>
+      text:
+    </th>
+    <td>
+      <input type="text" [(ngModel)]="item.text">
+    </td>
+  </tr>
+  <tr>
+    <th>
+      isActive:
+    </th>
+    <td>
+      <input type="text" [(ngModel)]="item.isActive">
+    </td>
+  </tr>
+</table>
+<button (click)="updateButtonClicked($event)">Update</button>

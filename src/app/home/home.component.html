@@ -1,0 +1,8 @@
+
+<div *ngIf="token">
+  <p>Username: {{username}}</p>
+  <button (click)="logout()">Logout</button><br><br>
+  <a routerLink="/item">ITEMS</a><br>
+  <a routerLink="/item/add">Add new item</a><br>
+</div>
+<a routerLink="/auth/login" *ngIf="!token">Login</a>

@@ -1,0 +1,27 @@
+
+<br>
+<br>
+<div *ngIf="error" (click)="retry()">{{error.status === 404 ? 'Item not found' : 'Service unavailable or no connectivity'}}</div>
+<div *ngIf="!item && !error">Loading...</div>
+<div *ngIf="item">Item details:
+  <table border="1">
+    <tr>
+      <th>
+        text:
+      </th>
+      <td width="200" align="center">
+        {{item.text}}
+      </td>
+    </tr>
+    <tr>
+      <th>
+        isActive:
+      </th>
+      <td width="200" align="center">
+        {{item.isActive}}
+      </td>
+    </tr>
+  </table>
+  <a routerLink="/item/detail/{{item._id}}/edit">Update this item</a>
+  <button (click)="deleteItem()">Delete this item</button>
+</div>
